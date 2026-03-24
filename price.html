@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>料金｜市川市・本八幡のピアノ教室｜酒井ピアノ教室</title>
+  <meta name="description" content="酒井ピアノ教室の料金ページです。1回40分、月4回、6千円。大人の生徒さんは回数、単発レッスン等ご相談応じます。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header sakai-top-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo logo-image" aria-label="酒井ピアノ教室 ホーム">
+        <img src="sakai_logo.png" alt="酒井ピアノ教室" class="site-logo-image" />
+      </a>
+
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">ホーム</a>
+        <a href="teacher.html">講師紹介</a>
+        <a href="price.html">料金</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage">
+    <section class="page-hero page-hero-soft">
+      <div class="container narrow-center">
+        <p class="section-label center">PRICE</p>
+        <h1 class="section-title">料金</h1>
+        <p class="lead center">安心して通っていただける、わかりやすい料金設定です。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow-center">
+        <div class="price-panel large">
+          <p class="price-main">1回40分　月4回　6千円</p>
+          <p>大人の生徒さんは回数、単発レッスン等ご相談応じます。</p>
+          <p>見学、体験レッスン受付してます。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer compact-footer">
+    <div class="container footer-bottom">
+      <p>© 2026 酒井ピアノ教室. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.site-nav');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contact｜酒井ピアノ教室</title>
+  <meta name="description" content="酒井ピアノ教室のお問い合わせページです。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header sakai-top-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo logo-image" aria-label="酒井ピアノ教室 ホーム">
+        <img src="sakai_logo.png" alt="酒井ピアノ教室" class="site-logo-image" />
+      </a>
+
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">ホーム</a>
+        <a href="teacher.html">講師紹介</a>
+        <a href="price.html">料金</a>
+        <a href="contact.html" class="active">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage sakai-contact-page">
+    <section class="sakai-breadcrumb">
+      <div class="container">
+        <p><a href="index.html">sakai piano school</a> &gt; contact</p>
+      </div>
+    </section>
+
+    <section class="section sakai-contact-section">
+      <div class="container">
+        <div class="sakai-contact-card">
+          <h1>contact</h1>
+
+          <form class="sakai-contact-form" action="#" method="post">
+            <div class="sakai-form-group">
+              <label for="name">氏名</label>
+              <input type="text" id="name" name="name" />
+            </div>
+
+            <div class="sakai-form-group">
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" name="email" />
+            </div>
+
+            <div class="sakai-form-group">
+              <label for="subject">題名</label>
+              <input type="text" id="subject" name="subject" />
+            </div>
+
+            <div class="sakai-form-group">
+              <label for="message">メッセージ本文（任意）</label>
+              <textarea id="message" name="message" rows="10"></textarea>
+            </div>
+
+            <button type="submit" class="sakai-submit-btn">送信</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer sakai-footer">
+    <div class="container">
+      <div class="sakai-page-top">Page Top</div>
+
+      <ul class="sakai-footer-nav">
+        <li><a href="index.html">top</a></li>
+        <li><a href="teacher.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="price.html">price</a></li>
+      </ul>
+
+      <p class="sakai-copy">© sakai piano school</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.site-nav');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>講師紹介｜市川市・本八幡のピアノ教室｜酒井ピアノ教室</title>
+  <meta name="description" content="酒井恵美の講師紹介。市川市八幡で、初心者から経験者まで丁寧に寄り添う個別ピアノレッスンを行っています。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header sakai-top-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo logo-image" aria-label="酒井ピアノ教室 ホーム">
+        <img src="sakai_logo.png" alt="酒井ピアノ教室" class="site-logo-image" />
+      </a>
+
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">ホーム</a>
+        <a href="teacher.html">講師紹介</a>
+        <a href="price.html">料金</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage">
+    <section class="page-hero page-hero-soft">
+      <div class="container narrow-center">
+        <p class="section-label center">TEACHER</p>
+        <h1 class="section-title">講師紹介</h1>
+        <p class="lead center">一人ひとりの個性に寄り添い、楽しく学べるレッスンを大切にしています。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow-center">
+        <article class="teacher-card">
+          <div class="teacher-avatar">
+            <img src="sample.photo7.jpg" alt="酒井恵美 講師写真">
+          </div>
+          <div class="teacher-body">
+
+            <h2>酒井 恵美</h2>
+            <p>
+              音楽大学ピアノ科卒業。基礎から表現まで丁寧に寄り添い、
+              生徒さんが安心して続けられるレッスンを大切にしています。
+            </p>
+            <p>
+              小さなお子さまから大人の方まで、それぞれの目標やペースに合わせて
+              楽しく学べる時間をご提供します。
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer compact-footer">
+    <div class="container footer-bottom">
+      <p>© 2026 酒井ピアノ教室. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.site-nav');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+
+</html>
